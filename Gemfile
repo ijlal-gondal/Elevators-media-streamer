@@ -7,7 +7,7 @@ gem 'bcrypt_pbkdf'
 
 ruby '2.6.3'
 
-
+gem 'rest-client'
 gem 'figaro'
 
 gem 'rspec'
