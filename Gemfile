@@ -9,7 +9,7 @@ ruby '2.6.3'
 
 gem 'rest-client'
 gem 'figaro'
-
+gem 'webmock'
 gem 'rspec'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

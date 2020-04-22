@@ -1,4 +1,6 @@
 require 'rest-client'
+require 'json'
+require 'net/http'
 
 module ElevatorMedia
     class Streamer
@@ -18,6 +20,7 @@ module ElevatorMedia
     end
 
     def getContent
+      #RestClient.get("http://worldtimeapi.org/api/timezone/America/Toronto")
       # getWeather()
       getTime()
 
@@ -29,10 +32,23 @@ module ElevatorMedia
     #   "<div> #{current_weather_json['name']['main.temp']}</div>"
     # end
 
-    def getTime
-      current_time = RestClient.get("http://worldtimeapi.org/api/timezone/America/Toronto")
-      current_time_json = JSON.parse(current_time)
-      "<div> #{current_time_json['timezone']['datetime']}</div>"
+    def getTime()
+      
+      rest_client_response = RestClient.get("http://worldtimeapi.org/api/timezone/America/Toronto")
+      response_body_json = rest_client_response.body
+      json_object = JSON.parse(response_body_json)
+      json_object
+      puts  json_object
+      # "<div> #{json_object['timezone']['datetime']}</div>"
+
+      # puts response
+
+      # current_time = URI(url)
+      # current_time = URI("http://worldtimeapi.org/api/timezone/America/Toronto")
+      # current_time = Net::HTTP.get(current_time)
+      # current_time_json = current_time.to_json()
+      # puts current_time_json
+      # "<div> #{current_time_json}</div>"
     end
 
 
