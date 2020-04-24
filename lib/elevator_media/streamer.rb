@@ -20,7 +20,7 @@ module ElevatorMedia
     end
 
     def getContent
-      getWeather()
+
       getTime()
 
     end
