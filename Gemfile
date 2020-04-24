@@ -9,9 +9,9 @@ ruby '2.6.3'
 
 gem 'rest-client'
 gem 'figaro'
+gem 'webmock'
 
-gem 'rspec'
-
+gem 'rspec-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 5.2.4", ">= 5.2.4.1"
 # Use mysql as the database for Active Record
