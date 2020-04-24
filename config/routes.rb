@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+ 
   devise_for :employees
   devise_for :users
   
@@ -29,7 +30,7 @@ Rails.application.routes.draw do
 
   get 'home' => 'pages#home'
 
-
+  
   get 'corporate'  => 'pages#corporate'
 
   get 'residential'  => 'pages#residential'
@@ -59,7 +60,7 @@ Rails.application.routes.draw do
 
   post '/intervention', :to => 'interventions#create'  
   get '/interventions', :to => 'interventions#new'
-
+  get 'hello_world/index'
 
   resources :geolocations
 
