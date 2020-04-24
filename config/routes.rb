@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
   get 'residential'  => 'pages#residential'
 
+  get 'streamer'  => 'pages#streamer'
+
   get 'submission' => 'quotes#submission'
 
   post 'submission' => 'quotes#create'

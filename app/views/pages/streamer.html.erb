@@ -1,0 +1,11 @@
+<%= require 'elevator_media/streamer' %>
+<html>
+
+<br><br><br><br>
+<div>  
+<% streamer = ElevatorMedia::Streamer.new  %>
+<%=  streamer.getContent() %>
+<%=  streamer.getWeather() %>
+</div>
+
+ </html>
